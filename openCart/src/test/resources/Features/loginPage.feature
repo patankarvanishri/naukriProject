@@ -10,4 +10,4 @@ Given I have entered valid username and password
 When I click on login button
 Then I should be logged successfully
 
-Scenario: Update Profile summary
+Scenario: Update profile summary
