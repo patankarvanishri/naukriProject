@@ -13,6 +13,7 @@ public class LoginPage {
 	private By emailInputLocator= By.xpath("//input[@id='usernameField']");
 	private By passwordInputLocator= By.xpath("//input[@id='passwordField']");
 	private By loginButtonLocator= By.xpath("//button[@type='submit']");
+	private By viewProfileLocator= By.xpath("//div[@class='view-profile-wrapper']//a");
 	
 	
 	//Constructor
@@ -39,6 +40,11 @@ public class LoginPage {
 		loginButton.click();
 	}
 	
-	
+	public void clickViewProfileButton() throws InterruptedException 
+	{
+		WebElement viewProfileButton=driver.findElement(viewProfileLocator);
+		viewProfileButton.click();
+		
+	}
 
 }
