@@ -14,7 +14,7 @@ Then I should be logged successfully
 Given I click on update profile button
 Then I am on the profile page
 And I click on edit resume headline
-Then I have entered text "Immediate Joiner | LWD: 4th Sep | ISTQB Certified | Automation testing | Selenium | Core Java |Cucumber| TestNG | restAssured"
+Then I have entered text "Immediate Joiner | ISTQB Certified | Automation testing | Selenium | Core Java |Cucumber| TestNG | restAssured "
 And I save the headline
 
 

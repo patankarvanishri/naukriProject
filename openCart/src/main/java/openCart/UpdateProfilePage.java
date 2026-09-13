@@ -47,11 +47,13 @@ private WebDriver driver;
 		if(newHeadLine.equals(text))
 		{
 			resumeHeadLineText.clear();
-			resumeHeadLineText.sendKeys(newHeadLine +" | ");
+			resumeHeadLineText.sendKeys(newHeadLine +" |");
 		}
+		
 		else {
 			resumeHeadLineText.clear();
-			resumeHeadLineText.sendKeys(newHeadLine);
+			resumeHeadLineText.sendKeys(newHeadLine  +" | AI QA ");
+		
 		}
 		
 	}
