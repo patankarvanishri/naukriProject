@@ -47,13 +47,15 @@ private WebDriver driver;
 		if(newHeadLine.equals(text))
 		{
 			resumeHeadLineText.clear();
-			resumeHeadLineText.sendKeys(newHeadLine +" |");
+			resumeHeadLineText.sendKeys(newHeadLine +"|");
+			System.out.println("If statement executed");		
+			
 		}
 		
 		else {
 			resumeHeadLineText.clear();
 			resumeHeadLineText.sendKeys(newHeadLine  +" | AI QA ");
-		
+			System.out.println("else statement executed");
 		}
 		
 	}
