@@ -10,7 +10,7 @@ Given I have entered valid username and password
 When I click on login button
 Then I should be logged successfully
 
-Scenario: Update profile summary
+#Scenario: Update profile summary
 Given I click on update profile button
 Then I am on the profile page
 And I click on edit resume headline
