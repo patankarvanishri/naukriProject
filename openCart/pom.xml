@@ -3,6 +3,35 @@
   <groupId>openCart</groupId>
   <artifactId>openCart</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.11.0</version>
+          <configuration>
+            <!-- put your configurations here -->
+          </configuration>
+        </plugin>
+        
+         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.2.2</version>
+           <configuration>
+           <suiteXmlFiles>
+            <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+             </suiteXmlFiles>
+                                 <!-- put your configurations here -->
+          </configuration>
+        </plugin>
+        
+      </plugins>
+    </pluginManagement>
+  </build>
+  
   <dependencies>
   <!-- Source: https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 <dependency>
@@ -70,13 +99,5 @@
 <!--</dependency>-->
 <!-- Source: https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
   </dependencies>
-  <build>
-  <plugins>
-  <plugin>
-  	<groupId>org.apache.maven.plugins</groupId>
-  	<artifactId>maven-surefire-plugin</artifactId>
-  	<version>3.6.0</version>
-  </plugin>
-  </plugins>
-  </build>
+  
 </project>
