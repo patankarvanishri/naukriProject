@@ -54,7 +54,7 @@ private WebDriver driver;
 		
 		else {
 			resumeHeadLineText.clear();
-			resumeHeadLineText.sendKeys(newHeadLine  +" | AI QA ");
+			resumeHeadLineText.sendKeys(text  +" | ");
 			System.out.println("else statement executed");
 		}
 		
