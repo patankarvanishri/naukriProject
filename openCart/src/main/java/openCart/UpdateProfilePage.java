@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class UpdateProfilePage {
+public class UpdateProfilePage extends BasePage {
 	
-private WebDriver driver;
+//private WebDriver driver;
 	
 	//By locator
 	
@@ -19,7 +19,7 @@ private WebDriver driver;
 	//Constructor
 	public UpdateProfilePage(WebDriver driver)
 	{	
-		this.driver = driver;
+	super(driver);
 	}
 	
 	
@@ -41,7 +41,7 @@ private WebDriver driver;
 	public void updateResumeHeadline(String newHeadLine) throws InterruptedException 
 	{
 		WebElement resumeHeadLineText=driver.findElement(resumeHeadLineTextLocator);
-		//resumeHeadLineText.clear();
+		Thread.sleep(1000);
 		String text = resumeHeadLineText.getAttribute("value");
 		//System.out.print(text);
 		if(newHeadLine.equals(text))

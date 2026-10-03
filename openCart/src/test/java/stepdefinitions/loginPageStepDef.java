@@ -1,8 +1,12 @@
 package stepdefinitions;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Listeners;
 
+import utilities.ExtentReport;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -12,18 +16,21 @@ import junit.framework.Assert;
 import openCart.LoginPage;
 import openCart.UpdateProfilePage;
 
+@Listeners (ExtentReport.class)
 public class loginPageStepDef {
 	
 	private WebDriver driver;
 	private LoginPage loginPage;
 	private UpdateProfilePage updateProfilePage;
 	
+	public Logger logger;
 	@Before
 	public void setUp() 
 	{
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
-		
+		logger = LogManager.getLogger(this.getClass()); //it will return log msg of this class
+		logger.debug("debugging********");
 	}
 	
 	
@@ -33,6 +40,7 @@ public class loginPageStepDef {
 		loginPage = new LoginPage(driver);
 	    driver.get("https://www.naukri.com/nlogin/login");
 	    Thread.sleep(3000);
+	    logger.info("************* On Naukri Page **********");
 	    
 	}
 
@@ -40,6 +48,8 @@ public class loginPageStepDef {
 	public void i_have_entered_valid_username_and_password() {
 	    loginPage.enterEmail("patankarvanishri@gmail.com");
 	    loginPage.enterPassword("Parvati@1996");
+	    logger.info("************* Entered Credentials **********");
+	    
 	}
 
 	@When("I click on login button")
